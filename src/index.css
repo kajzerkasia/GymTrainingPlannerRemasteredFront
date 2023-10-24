@@ -19,6 +19,23 @@ html {
   min-height: 80rem;
 }
 
+main {
+  width: 90%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+main h2, p {
+  text-align: center;
+  font-family: "Roboto Flex", sans-serif;
+  margin: 0 0 1.5rem 0;
+  color: #a18aba;
+}
+
+main p {
+  margin-top: 2rem;
+}
+
 .plans-buttons ul button {
   padding: 0.5rem 1rem;
   border: none;
