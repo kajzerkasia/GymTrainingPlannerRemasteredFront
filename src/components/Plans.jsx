@@ -24,7 +24,9 @@ const Plans = () => {
         tabContent = (
             <div id="tab-content">
                 <Section id="parts_of_plans" className="plans-buttons">
-                    <Tabs buttons={
+                    <Tabs
+                        ButtonsContainer="ul"
+                        buttons={
                         <Card className="card-brighter">
                             {PARTS_OF_PLANS.map((partOfPlan) => (
                                 <TabButton
@@ -47,7 +49,9 @@ const Plans = () => {
     return (
         <Card>
             <Section id="plans" className="plans-buttons" title="Plany">
-                <Tabs buttons={
+                <Tabs
+                    ButtonsContainer="ul"
+                    buttons={
                     <>
                         {PLANS.map((plan) => (
                             <TabButton
