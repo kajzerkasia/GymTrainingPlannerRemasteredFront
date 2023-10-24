@@ -3,6 +3,7 @@ import {PARTS_OF_PLANS, PLANS} from "../data.js";
 import TabButton from "./TabButton.jsx";
 import Card from "./UI/Card.jsx";
 import Section from "./Section.jsx";
+import Tabs from "./Tabs.jsx";
 
 const Plans = () => {
     const [selectedPlan, setSelectedPlan] = useState();
@@ -23,7 +24,7 @@ const Plans = () => {
         tabContent = (
             <div id="tab-content">
                 <Section id="parts_of_plans" className="plans-buttons">
-                    <ul>
+                    <Tabs buttons={
                         <Card className="card-brighter">
                             {PARTS_OF_PLANS.map((partOfPlan) => (
                                 <TabButton
@@ -36,7 +37,8 @@ const Plans = () => {
                                 </TabButton>
                             ))}
                         </Card>
-                    </ul>
+                    }>
+                    </Tabs>
                 </Section>
             </div>
         );
@@ -45,22 +47,23 @@ const Plans = () => {
     return (
         <Card>
             <Section id="plans" className="plans-buttons" title="Plany">
-                <ul>
-                    {PLANS.map((plan) => (
-                        <TabButton
-                            key={plan.title}
-                            {...plan}
-                            isSelected={selectedPlan === `${plan.title}`}
-                            onClick={() => handleSelectPlan(`${plan.title}`)}
-                        >
-                            {plan.title}
-                        </TabButton>
-                    ))}
-                </ul>
+                <Tabs buttons={
+                    <>
+                        {PLANS.map((plan) => (
+                            <TabButton
+                                key={plan.title}
+                                {...plan}
+                                isSelected={selectedPlan === `${plan.title}`}
+                                onClick={() => handleSelectPlan(`${plan.title}`)}
+                            >
+                                {plan.title}
+                            </TabButton>
+                        ))}
+                    </>
+                }>
+                    {tabContent}
+                </Tabs>
             </Section>
-            <section>
-                {tabContent}
-            </section>
         </Card>
     );
 };
