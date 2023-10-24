@@ -1,9 +1,10 @@
 import React from 'react';
+import './Header.css';
 
 const Header = () => {
     return (
         <header>
-            <img src="" alt=""/>
+            {/*<img src="" alt=""/>*/}
             <h1>Gym Training Planner</h1>
             <p>Your space to manage your training plans</p>
         </header>
