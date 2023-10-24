@@ -19,3 +19,25 @@ html {
   min-height: 80rem;
 }
 
+.plans-buttons ul button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #a18aba;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.plans-buttons ul button:hover {
+  background-color: #2e154c;
+  color: #ebe7ef;
+}
+
+.plans-buttons ul button.active {
+  background-color: #673599;
+  color: #ebe7ef;
+}
+
