@@ -25,7 +25,6 @@ const Plans = () => {
             <div id="tab-content">
                 <Section id="parts_of_plans" className="plans-buttons">
                     <Tabs
-                        ButtonsContainer="ul"
                         buttons={
                         <Card className="card-brighter">
                             {PARTS_OF_PLANS.map((partOfPlan) => (
@@ -50,7 +49,6 @@ const Plans = () => {
         <Card>
             <Section id="plans" className="plans-buttons" title="Plany">
                 <Tabs
-                    ButtonsContainer="ul"
                     buttons={
                     <>
                         {PLANS.map((plan) => (
