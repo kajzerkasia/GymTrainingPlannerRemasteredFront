@@ -4,3 +4,12 @@
     background-color: #140524;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
+
+.card-brighter {
+    background-color: #3c1366;
+}
+
+.card-brighter li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
