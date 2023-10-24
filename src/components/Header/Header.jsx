@@ -6,7 +6,7 @@ const Header = () => {
         <header>
             {/*<img src="" alt=""/>*/}
             <h1>Gym Training Planner</h1>
-            <p>Your space to manage your training plans</p>
+            <p>Twoja przestrzeń do zarządzania planami treningowymi</p>
         </header>
     );
 };
