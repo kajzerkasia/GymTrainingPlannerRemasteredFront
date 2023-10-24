@@ -30,7 +30,7 @@ const Plans = () => {
                                     key={partOfPlan.title}
                                     {...partOfPlan}
                                     isSelected={selectedPartOfPlan === `${partOfPlan.title}`}
-                                    onSelect={() => handleSelectPartOfPlan(`${partOfPlan.title}`)}
+                                    onClick={() => handleSelectPartOfPlan(`${partOfPlan.title}`)}
                                 >
                                     {partOfPlan.title}
                                 </TabButton>
@@ -51,7 +51,7 @@ const Plans = () => {
                             key={plan.title}
                             {...plan}
                             isSelected={selectedPlan === `${plan.title}`}
-                            onSelect={() => handleSelectPlan(`${plan.title}`)}
+                            onClick={() => handleSelectPlan(`${plan.title}`)}
                         >
                             {plan.title}
                         </TabButton>
