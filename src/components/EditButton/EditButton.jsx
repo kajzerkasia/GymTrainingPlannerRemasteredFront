@@ -8,15 +8,15 @@ const EditButton = ({name}) => {
         setIsEditing(editing => !editing);
     }
 
-    let partOfPlanName = <span className='part-of-plan-name'>{name}</span>
+    let content = <span className='content-name'>{name}</span>
 
     if (isEditing) {
-        partOfPlanName = <input type="text" required value={name}/>;
+        content = <input type="text" required value={name}/>;
     }
     return (
         <li>
-             <span className="part-of-plan">
-                {partOfPlanName}
+             <span className="content">
+                {content}
             </span>
             <button className="edit-button" onClick={handleEditClick}>{isEditing ? 'Zapisz' : 'Edytuj'}</button>
         </li>
