@@ -59,7 +59,7 @@ const Plans = () => {
                                 isSelected={selectedPlan === `${plan.title}`}
                                 onClick={() => handleSelectPlan(`${plan.title}`)}
                             >
-                                {plan.title}
+                                <EditButton name={plan.title}/>
                             </TabButton>
                         ))}
                     </>
