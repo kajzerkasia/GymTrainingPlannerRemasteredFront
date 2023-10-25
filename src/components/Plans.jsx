@@ -35,7 +35,7 @@ const Plans = () => {
                                     isSelected={selectedPartOfPlan === `${partOfPlan.title}`}
                                     onClick={() => handleSelectPartOfPlan(`${partOfPlan.title}`)}
                                 >
-                                    <EditButton name={partOfPlan.title}/>
+                                    <EditButton initialName={partOfPlan.title}/>
                                 </TabButton>
                             ))}
                         </Card>
@@ -59,7 +59,7 @@ const Plans = () => {
                                 isSelected={selectedPlan === `${plan.title}`}
                                 onClick={() => handleSelectPlan(`${plan.title}`)}
                             >
-                                <EditButton name={plan.title}/>
+                                <EditButton initialName={plan.title}/>
                             </TabButton>
                         ))}
                     </>
