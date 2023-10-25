@@ -1,22 +1,27 @@
 import React, {useState} from 'react';
 import './EditButton.css'
 
-const EditButton = ({name}) => {
+const EditButton = ({initialName}) => {
+    const [contentName, setContentName] = useState(initialName);
     const [isEditing, setIsEditing] = useState(false);
 
     const handleEditClick = () => {
         setIsEditing(editing => !editing);
     }
 
-    let content = <span className='content-name'>{name}</span>
+    const handleChange = (event) => {
+        setContentName(event.target.value);
+    }
+
+    let editableContentName = <span className='content-name'>{contentName}</span>
 
     if (isEditing) {
-        content = <input type="text" required value={name}/>;
+        editableContentName = <input type="text" required value={contentName} onChange={handleChange}/>;
     }
     return (
         <li>
              <span className="content">
-                {content}
+                {editableContentName}
             </span>
             <button className="edit-button" onClick={handleEditClick}>{isEditing ? 'Zapisz' : 'Edytuj'}</button>
         </li>
