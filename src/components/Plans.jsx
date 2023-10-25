@@ -4,6 +4,7 @@ import TabButton from "./TabButton.jsx";
 import Card from "./UI/Card.jsx";
 import Section from "./Section.jsx";
 import Tabs from "./Tabs.jsx";
+import EditButton from "./EditButton/EditButton.jsx";
 
 const Plans = () => {
     const [selectedPlan, setSelectedPlan] = useState();
@@ -34,7 +35,7 @@ const Plans = () => {
                                     isSelected={selectedPartOfPlan === `${partOfPlan.title}`}
                                     onClick={() => handleSelectPartOfPlan(`${partOfPlan.title}`)}
                                 >
-                                    {partOfPlan.title}
+                                    <EditButton name={partOfPlan.title}/>
                                 </TabButton>
                             ))}
                         </Card>
