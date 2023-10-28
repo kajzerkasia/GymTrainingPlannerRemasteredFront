@@ -3,7 +3,7 @@ import Section from "./Section.jsx";
 import Tabs from "./Tabs.jsx";
 import Card from "./UI/Card.jsx";
 import {PARTS_OF_PLANS} from "../data.js";
-import TabButton from "./TabButton.jsx";
+import TabButton from "./TabButton/TabButton.jsx";
 import EditButton from "./EditButton/EditButton.jsx";
 
 const TabContent = () => {
