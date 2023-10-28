@@ -13,7 +13,7 @@ header h1 {
     margin: 0;
     font-family: 'Playpen Sans', cursive;
     font-size: 3rem;
-    background: linear-gradient(40deg, #ff6dec, #ea7ff1, #27fff1, #47f9ff);
+    background: linear-gradient(40deg, #ff6dec, #ea7ff1, #27fff1, #76c0ae);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
