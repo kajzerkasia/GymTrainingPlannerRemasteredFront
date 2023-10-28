@@ -1,10 +1,11 @@
 import React from 'react';
 import Section from "../Section.jsx";
+import './ExercisesInput.css';
 
 const ExercisesInput = ({ onChange, exercisesInput }) => {
     return (
-        <Section>
-            <div className="single-exercises-input">
+        <Section id="exercises-input">
+            <div>
                 <p>
                     <label>Kolejność</label>
                     <input

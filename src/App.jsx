@@ -29,10 +29,10 @@ function App() {
             <main>
                 <Plans/>
             </main>
-            <Exercises/>
             <ExercisesInput
                 exercisesInput={exercisesInput}
                 onChange={handleChange}/>
+            <Exercises/>
         </div>
     )
 }
