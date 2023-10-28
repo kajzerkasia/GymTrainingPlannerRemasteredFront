@@ -32,7 +32,7 @@ function App() {
             <ExercisesInput
                 exercisesInput={exercisesInput}
                 onChange={handleChange}/>
-            <Exercises/>
+            {exercisesInput.order !== '' && <Exercises exercisesData={exercisesInput}/>}
         </div>
     )
 }
