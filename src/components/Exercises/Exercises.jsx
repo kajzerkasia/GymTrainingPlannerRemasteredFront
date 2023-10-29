@@ -1,5 +1,5 @@
 import React from 'react';
-import './Exercises.css';
+// import './Exercises.css';
 import {createArrayOfExercises} from "../../utils/exercisesArray.js";
 
 const columnNames = [

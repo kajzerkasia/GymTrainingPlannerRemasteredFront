@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './EditButton.css'
+// import './EditButton.css'
 
 const EditButton = ({initialName}) => {
     const [contentName, setContentName] = useState(initialName);
