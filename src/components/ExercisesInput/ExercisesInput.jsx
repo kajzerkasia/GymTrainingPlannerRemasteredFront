@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from "../Section.jsx";
-import './ExercisesInput.css';
+// import './ExercisesInput.css';
 
 const ExercisesInput = ({ onChange, exercisesInput }) => {
     return (

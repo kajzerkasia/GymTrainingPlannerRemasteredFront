@@ -3,9 +3,9 @@ import {PLANS} from "../../data.js";
 import TabButton from "../TabButton/TabButton.jsx";
 import Card from "../UI/Card.jsx";
 import Section from "../Section.jsx";
-import Tabs from "../Tabs.jsx";
+import Tabs from "../Tabs/Tabs.jsx";
 import EditButton from "../EditButton/EditButton.jsx";
-import TabContent from "../TabContent.jsx";
+import TabContent from "../TabContent/TabContent.jsx";
 
 const Plans = () => {
     const [selectedPlan, setSelectedPlan] = useState();
@@ -22,6 +22,7 @@ const Plans = () => {
                     <>
                         {PLANS.map((plan) => (
                             <TabButton
+                                className="plans-buttons"
                                 key={plan.title}
                                 {...plan}
                                 isSelected={selectedPlan === `${plan.title}`}
