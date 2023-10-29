@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        title: ['"Roboto Flex"'],
+        header: ['"Playpen Sans"', 'cursive']
+      },
+      colors: {
+        'pink': '#ff6dec',
+        'cyan': '#27fff1',
+        'violet': '#8964b0'
+      },
+    },
+
   },
   plugins: [],
 }
