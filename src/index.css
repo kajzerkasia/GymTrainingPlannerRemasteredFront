@@ -1,38 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;700&family=Roboto+Flex:opsz,wght@8..144,400;8..144,700&display=swap');
-
-* {
-  box-sizing: border-box;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
-  font-family: 'Roboto Flex', sans-serif;
-  line-height: 1.5;
-
-  color: #ebe7ef;
   background: radial-gradient(#280a48, #20043d);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  min-height: 80rem;
+  font-family: 'Roboto Flex', sans-serif;
 }
-
-main {
-  width: 90%;
-  max-width: 50rem;
-  margin: auto;
-}
-
-main h2, p {
-  text-align: center;
-  font-family: "Roboto Flex", sans-serif;
-  margin: 0 0 1.5rem 0;
-  color: #a18aba;
-}
-
-main p {
-  margin-top: 2rem;
-}
-
