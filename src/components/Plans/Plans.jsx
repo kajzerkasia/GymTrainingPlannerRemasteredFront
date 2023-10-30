@@ -16,7 +16,7 @@ const Plans = () => {
 
     return (
         <Card>
-            <Section className="flex flex-col text-violet" title="Plany">
+            <Section className="flex flex-col text-violet uppercase font-bold" title="Plany treningowe">
                 <Tabs
                     className="flex flex-wrap justify-center list-none py-8 m-0 gap-8"
                     buttons={

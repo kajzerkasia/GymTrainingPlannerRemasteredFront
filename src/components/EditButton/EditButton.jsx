@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 // import './EditButton.css'
+import {FaEdit, FaRegCheckSquare} from "react-icons/fa";
 
 const EditButton = ({initialName}) => {
     const [contentName, setContentName] = useState(initialName);
@@ -23,7 +24,7 @@ const EditButton = ({initialName}) => {
              <span className="border-2 border-transparent py-2 px-2 rounded font-bold">
                 {editableContentName}
             </span>
-            <button className="edit-button" onClick={handleEditClick}>{isEditing ? 'Zapisz' : 'Edytuj'}</button>
+            <button className="edit-button" onClick={handleEditClick}>{isEditing ? <FaRegCheckSquare/> : <FaEdit/>}</button>
         </li>
     );
 };
