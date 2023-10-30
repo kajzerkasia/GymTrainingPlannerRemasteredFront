@@ -13,14 +13,14 @@ const EditButton = ({initialName}) => {
         setContentName(event.target.value);
     }
 
-    let editableContentName = <span className='content-name'>{contentName}</span>
+    let editableContentName = <button className='inline-block w-40 text-base text-almost-white uppercase m-0 p-2 rounded text-ellipsis text-center hover:bg-violet'>{contentName}</button>
 
     if (isEditing) {
-        editableContentName = <input type="text" required value={contentName} onChange={handleChange}/>;
+        editableContentName = <input type="text" required value={contentName} onChange={handleChange} className="text-base w-40 border-none p-2 animate-pulse bg-violet text-center uppercase"/>;
     }
     return (
         <li>
-             <span className="content">
+             <span className="border-2 border-transparent py-2 px-2 rounded font-bold">
                 {editableContentName}
             </span>
             <button className="edit-button" onClick={handleEditClick}>{isEditing ? 'Zapisz' : 'Edytuj'}</button>
