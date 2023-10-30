@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Tabs = ({ children, buttons, ButtonsContainer = 'ul' }) => {
+const Tabs = ({ children, buttons, ButtonsContainer = 'ul', ...props}) => {
     return (
         <>
-            <ButtonsContainer>
+            <ButtonsContainer {...props}>
                 {buttons}
             </ButtonsContainer>
             {children && children}
