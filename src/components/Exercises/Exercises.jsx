@@ -19,11 +19,12 @@ const Exercises = ({ exercisesData }) => {
 
     return (
         <>
-        <ol id="exercises-column-names">
+        {/*<ol id="exercises-column-names">*/}
+        <ol className="flex flex-wrap flex-col justify-center gap-8 my-12 mx-0 p-0 list-none">
             {columnNames.map((row, rowIndex) => <li key={rowIndex}>
-                <ol>
+                <ol className="flex flex-wrap justify-center gap-8 m-0 p-0 list-none">
                     {row.map((exercise, colIndex) => <li key={colIndex}>
-                        <button>{exercise}</button>
+                        <button className="bg-violet text-almost-white uppercase w-32 h-32 border-none text-base py-4 font-button">{exercise}</button>
                     </li>)}
                 </ol>
             </li>)}
