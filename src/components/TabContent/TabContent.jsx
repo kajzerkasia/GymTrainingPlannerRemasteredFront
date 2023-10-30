@@ -16,12 +16,14 @@ const TabContent = () => {
 
     return (
         <div id="tab-content">
-            <Section>
+            <Section className="flex flex-col text-violet">
                 <Tabs
+                    className="flex flex-wrap justify-center list-none py-8 m-0 gap-8"
                     buttons={
                         <Card className="card-brighter">
                             {PARTS_OF_PLANS.map((partOfPlan) => (
                                 <TabButton
+                                    className="text-almost-white border-solid border-2 border-violet py-2 px-2"
                                     key={partOfPlan.title}
                                     {...partOfPlan}
                                     isSelected={selectedPartOfPlan === `${partOfPlan.title}`}
