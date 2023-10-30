@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         title: ['"Roboto Flex"'],
-        header: ['"Playpen Sans"', 'cursive']
+        header: ['"Playpen Sans"', 'cursive'],
+        button: ['"Caprasimo"', 'cursive']
       },
       colors: {
         'pink': '#ff6dec',

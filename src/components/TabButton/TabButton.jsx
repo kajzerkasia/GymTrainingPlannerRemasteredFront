@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TabButton = ({children, isSelected, ...props}) => {
-    let active = "bg-darker-violet text-almost-white"
+    let active = "bg-darker-violet"
     // background-color: #673599;
     // color: #ebe7ef;
 
