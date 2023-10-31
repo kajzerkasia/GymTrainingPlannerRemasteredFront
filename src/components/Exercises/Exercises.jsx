@@ -17,6 +17,8 @@ const columnNames = [
 const Exercises = ({ exercisesData }) => {
     const exercises = createArrayOfExercises(exercisesData);
 
+    const buttonClasses = "bg-violet text-almost-white uppercase w-32 h-32 border-none text-base py-4 font-button"
+
     return (
         <>
         {/*<ol id="exercises-column-names">*/}
@@ -24,19 +26,19 @@ const Exercises = ({ exercisesData }) => {
             {columnNames.map((row, rowIndex) => <li key={rowIndex}>
                 <ol className="flex flex-wrap justify-center gap-8 m-0 p-0 list-none">
                     {row.map((exercise, colIndex) => <li key={colIndex}>
-                        <button className="bg-violet text-almost-white uppercase w-32 h-32 border-none text-base py-4 font-button">{exercise}</button>
+                        <button className={buttonClasses}>{exercise}</button>
                     </li>)}
                 </ol>
             </li>)}
         </ol>
-        <ol id="exercises">
-            {exercises.map((exercise) => {
-                return <ol key={exercise.order}>
-                    <button>{exercise.order}</button>
-                    <button>{exercise.exercise}</button>
-                    <button>{exercise.seriesAndRepetitions}</button>
-                    <button>{exercise.tempo}</button>
-                    <button>{exercise.rest}</button>
+        <ol className="flex flex-wrap flex-col justify-center gap-8 my-12 mx-0 p-0 list-none">
+            {exercises.map((exercise, colIndex) => {
+                return <ol key={colIndex} className="flex flex-wrap justify-center gap-8 m-0 p-0 list-none">
+                    <button className={buttonClasses}>{exercise.order}</button>
+                    <button className={buttonClasses}>{exercise.exercise}</button>
+                    <button className={buttonClasses}>{exercise.seriesAndRepetitions}</button>
+                    <button className={buttonClasses}>{exercise.tempo}</button>
+                    <button className={buttonClasses}>{exercise.rest}</button>
                 </ol>
             })}
         </ol>
