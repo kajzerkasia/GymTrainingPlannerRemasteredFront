@@ -3,12 +3,16 @@ import Section from "../Section.jsx";
 // import './ExercisesInput.css';
 
 const ExercisesInput = ({ onChange, exercisesInput }) => {
+    const labelClasses = "block mb-1 font-title text-base font-bold uppercase text-almost-white";
+    const inputClasses = "w-full p-2 mb-4 border border-cyan bg-transparent rounded text-cyan text-base";
+
     return (
-        <Section id="exercises-input">
+        <Section className='p-4 max-w-lg my-8 mx-0 rounded bg-violet'>
             <div>
                 <p>
-                    <label>Kolejność</label>
+                    <label className={labelClasses}>Kolejność</label>
                     <input
+                        className={inputClasses}
                         type="text"
                         required
                         value={exercisesInput.order}
@@ -20,8 +24,9 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
             </div>
             <div>
                 <p>
-                    <label>Ćwiczenie</label>
+                    <label className={labelClasses}>Ćwiczenie</label>
                     <input
+                        className={inputClasses}
                         type="text"
                         required
                         value={exercisesInput.exercise}
@@ -33,8 +38,9 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
             </div>
             <div>
                 <p>
-                    <label>Ilość serii i powtórzeń</label>
+                    <label className={labelClasses}>Ilość serii i powtórzeń</label>
                     <input
+                        className={inputClasses}
                         type="text"
                         required
                         value={exercisesInput.seriesAndRepetitions}
@@ -46,8 +52,9 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
             </div>
             <div>
                 <p>
-                    <label>Tempo</label>
+                    <label className={labelClasses}>Tempo</label>
                     <input
+                        className={inputClasses}
                         type="text"
                         required
                         value={exercisesInput.tempo}
@@ -59,8 +66,9 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
             </div>
             <div>
                 <p>
-                    <label>Długość przerwy</label>
+                    <label className={labelClasses}>Długość przerwy</label>
                     <input
+                        className={inputClasses}
                         type="text"
                         required
                         value={exercisesInput.rest}
@@ -75,3 +83,5 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
 };
 
 export default ExercisesInput;
+
+// @TODO: Separate reusable component that contains label + input
