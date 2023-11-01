@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-// import './EditButton.css'
 import {FaEdit, FaRegCheckSquare} from "react-icons/fa";
 
 const EditButton = ({initialName}) => {
@@ -14,24 +13,26 @@ const EditButton = ({initialName}) => {
         setContentName(event.target.value);
     }
 
-    let editableContentName = <button className="edit-button-classes">{contentName}</button>
-
-    if (isEditing) {
-        editableContentName =
-            <input
-                type="text"
-                required
-                value={contentName}
-                onChange={handleChange}
-                className="edit-button-input-classes"
-            />;
-    }
     return (
         <li>
              <span
                  className="edit-button-span-classes"
              >
-                {editableContentName}
+                {isEditing ?
+                    <input
+                        type="text"
+                        required
+                        value={contentName}
+                        onChange={handleChange}
+                        className="edit-button-input-classes"
+                    />
+                    :
+                    <button
+                        className="edit-button-classes"
+                    >
+                        {contentName}
+                    </button>
+                }
             </span>
             <button
                 onClick={handleEditClick}
