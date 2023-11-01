@@ -49,15 +49,6 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
           onChange={(event) => onChange("tempo", event.target.value)}
         />
       </CustomInput>
-      <CustomInput labelText="Tempo" className={labelClasses}>
-        <input
-          className={inputClasses}
-          type="text"
-          required
-          value={exercisesInput.tempo}
-          onChange={(event) => onChange("tempo", event.target.value)}
-        />
-      </CustomInput>
       <CustomInput labelText="Długość przerwy" className={labelClasses}>
         <input
           className={inputClasses}

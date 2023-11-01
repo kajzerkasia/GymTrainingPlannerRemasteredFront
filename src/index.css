@@ -13,15 +13,35 @@ html {
 }
 
 @layer components {
-    .edit-button-input-classes {
+    .edit-button-input {
         @apply text-base w-40 border-none p-2 animate-pulse bg-violet text-center uppercase;
     }
 
-    .edit-button-classes {
+    .edit-button {
         @apply inline-block w-40 text-base text-almost-white uppercase m-0 p-2 rounded text-ellipsis text-center hover:bg-violet;
     }
 
-    .edit-button-span-classes {
+    .edit-button-span {
         @apply border-2 border-transparent py-2 px-2 rounded font-bold;
+    }
+
+    .exercises-column-names-ol {
+        @apply flex flex-wrap flex-col justify-center gap-8 my-12 mx-0 p-0 list-none;
+    }
+
+    .exercises-column-names-second-ol {
+        @apply flex flex-wrap justify-center gap-8 m-0 p-0 list-none;
+    }
+
+    .exercises-button {
+        @apply bg-violet text-almost-white uppercase w-32 h-32 border-none text-base py-4 font-button;
+    }
+
+    .exercises-ol {
+        @apply flex flex-wrap flex-col justify-center gap-8 my-12 mx-0 p-0 list-none;
+    }
+
+    .exercises-second-ol {
+        @apply flex flex-wrap justify-center gap-8 m-0 p-0 list-none;
     }
 }
