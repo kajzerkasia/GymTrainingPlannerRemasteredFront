@@ -11,3 +11,16 @@ html {
     background-attachment: fixed;
     background-size: cover;
 }
+
+@layer components {
+    .edit-button-input-classes {
+        @apply text-base w-40 border-none p-2 animate-pulse bg-violet text-center uppercase;
+    }
+
+    .edit-button-classes {
+        @apply inline-block w-40 text-base text-almost-white uppercase m-0 p-2 rounded text-ellipsis text-center hover:bg-violet;
+    }
+    .edit-button-span-classes {
+        @apply border-2 border-transparent py-2 px-2 rounded font-bold;
+    }
+}

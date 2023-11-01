@@ -6,10 +6,6 @@ const EditButton = ({initialName}) => {
     const [contentName, setContentName] = useState(initialName);
     const [isEditing, setIsEditing] = useState(false);
 
-    const inputClasses = "text-base w-40 border-none p-2 animate-pulse bg-violet text-center uppercase";
-    const buttonClasses = "inline-block w-40 text-base text-almost-white uppercase m-0 p-2 rounded text-ellipsis text-center hover:bg-violet"
-    const spanClasses = "border-2 border-transparent py-2 px-2 rounded font-bold";
-
     const handleEditClick = () => {
         setIsEditing(editing => !editing);
     }
@@ -18,7 +14,7 @@ const EditButton = ({initialName}) => {
         setContentName(event.target.value);
     }
 
-    let editableContentName = <button className={buttonClasses}>{contentName}</button>
+    let editableContentName = <button className="edit-button-classes">{contentName}</button>
 
     if (isEditing) {
         editableContentName =
@@ -27,18 +23,17 @@ const EditButton = ({initialName}) => {
                 required
                 value={contentName}
                 onChange={handleChange}
-                className={inputClasses}
+                className="edit-button-input-classes"
             />;
     }
     return (
         <li>
              <span
-                 className={spanClasses}
+                 className="edit-button-span-classes"
              >
                 {editableContentName}
             </span>
             <button
-                className="edit-button"
                 onClick={handleEditClick}
             >
                 {isEditing ? <FaRegCheckSquare/> : <FaEdit/>}
