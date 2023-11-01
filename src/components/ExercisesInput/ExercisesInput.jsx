@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from "../Section.jsx";
+import CustomInput from "../CustomInput/CustomInput.jsx";
 // import './ExercisesInput.css';
 
 const ExercisesInput = ({ onChange, exercisesInput }) => {
@@ -8,80 +9,86 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
 
     return (
         <Section className='p-4 max-w-lg my-8 mx-0 rounded bg-violet'>
-            <div>
-                <p>
-                    <label className={labelClasses}>Kolejność</label>
-                    <input
-                        className={inputClasses}
-                        type="text"
-                        required
-                        value={exercisesInput.order}
-                        onChange={(event) =>
-                            onChange('order', event.target.value)
+            <CustomInput
+                labelText="Kolejność"
+                className={labelClasses}>
+                <input
+                    className={inputClasses}
+                    type="text"
+                    required
+                    value={exercisesInput.order}
+                    onChange={(event) =>
+                        onChange('order', event.target.value)
                     }
-                    />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <label className={labelClasses}>Ćwiczenie</label>
-                    <input
-                        className={inputClasses}
-                        type="text"
-                        required
-                        value={exercisesInput.exercise}
-                        onChange={(event) =>
-                            onChange('exercise', event.target.value)
-                        }
-                    />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <label className={labelClasses}>Ilość serii i powtórzeń</label>
-                    <input
-                        className={inputClasses}
-                        type="text"
-                        required
-                        value={exercisesInput.seriesAndRepetitions}
-                        onChange={(event) =>
-                            onChange('seriesAndRepetitions', event.target.value)
-                        }
-                    />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <label className={labelClasses}>Tempo</label>
-                    <input
-                        className={inputClasses}
-                        type="text"
-                        required
-                        value={exercisesInput.tempo}
-                        onChange={(event) =>
-                            onChange('tempo', event.target.value)
-                        }
-                    />
-                </p>
-            </div>
-            <div>
-                <p>
-                    <label className={labelClasses}>Długość przerwy</label>
-                    <input
-                        className={inputClasses}
-                        type="text"
-                        required
-                        value={exercisesInput.rest}
-                        onChange={(event) =>
-                            onChange('rest', event.target.value)
-                        }
-                    />
-                </p>
-            </div>
+                />
+            </CustomInput>
+            <CustomInput
+                labelText="Ćwiczenie"
+                className={labelClasses}>
+                <input
+                    className={inputClasses}
+                    type="text"
+                    required
+                    value={exercisesInput.exercise}
+                    onChange={(event) =>
+                        onChange('exercise', event.target.value)
+                    }
+                />
+            </CustomInput>
+            <CustomInput
+                labelText="Ilość serii i powtórzeń"
+                className={labelClasses}>
+                <input
+                    className={inputClasses}
+                    type="text"
+                    required
+                    value={exercisesInput.seriesAndRepetitions}
+                    onChange={(event) =>
+                        onChange('seriesAndRepetitions', event.target.value)
+                    }
+                />
+            </CustomInput>
+            <CustomInput
+                labelText="Tempo"
+                className={labelClasses}>
+                <input
+                    className={inputClasses}
+                    type="text"
+                    required
+                    value={exercisesInput.tempo}
+                    onChange={(event) =>
+                        onChange('tempo', event.target.value)
+                    }
+                />
+            </CustomInput>
+            <CustomInput
+                labelText="Tempo"
+                className={labelClasses}>
+                <input
+                    className={inputClasses}
+                    type="text"
+                    required
+                    value={exercisesInput.tempo}
+                    onChange={(event) =>
+                        onChange('tempo', event.target.value)
+                    }
+                />
+            </CustomInput>
+            <CustomInput
+                labelText="Długość przerwy"
+                className={labelClasses}>
+                <input
+                    className={inputClasses}
+                    type="text"
+                    required
+                    value={exercisesInput.rest}
+                    onChange={(event) =>
+                        onChange('rest', event.target.value)
+                    }
+                />
+            </CustomInput>
         </Section>
     );
 };
 
 export default ExercisesInput;
-
-// @TODO: Separate reusable component that contains label + input
