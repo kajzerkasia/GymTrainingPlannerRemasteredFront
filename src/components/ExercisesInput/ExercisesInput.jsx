@@ -8,7 +8,7 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
     const inputClasses = "w-full p-2 mb-4 border border-cyan bg-transparent rounded text-cyan text-base";
 
     return (
-        <Section className='p-4 max-w-lg my-8 mx-0 rounded bg-violet'>
+        <Section className='p-4 w-2/5 my-8 mx-0 rounded bg-violet'>
             <CustomInput
                 labelText="Kolejność"
                 className={labelClasses}>
