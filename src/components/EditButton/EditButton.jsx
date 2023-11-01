@@ -15,17 +15,17 @@ const EditButton = ({ initialName }) => {
 
   return (
     <li>
-      <span className="edit-button-span-classes">
+      <span className="edit-button-span">
         {isEditing ? (
           <input
             type="text"
             required
             value={contentName}
             onChange={handleChange}
-            className="edit-button-input-classes"
+            className="edit-button-input"
           />
         ) : (
-          <button className="edit-button-classes">{contentName}</button>
+          <button className="edit-button">{contentName}</button>
         )}
       </span>
       <button onClick={handleEditClick}>
