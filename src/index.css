@@ -18,7 +18,7 @@ html {
     }
 
     .edit-button {
-        @apply inline-block w-40 text-base text-almost-white uppercase m-0 p-2 rounded text-ellipsis text-center hover:bg-violet;
+        @apply inline-block w-40 text-base text-almost-white uppercase m-0 p-2 rounded text-ellipsis text-center;
     }
 
     .edit-button-span {
@@ -77,6 +77,22 @@ html {
     }
 
     .plans-tab-button {
+        @apply text-almost-white border-solid border-2 border-violet py-2 px-2 hover:bg-violet;
+    }
+
+    .active {
+        @apply bg-violet;
+    }
+
+    .tab-content-section {
+        @apply flex flex-col text-violet;
+    }
+
+    .tab-content-tabs {
+        @apply flex flex-wrap justify-center list-none py-8 m-0 gap-8;
+    }
+
+    .tab-content-tab-button {
         @apply text-almost-white border-solid border-2 border-violet py-2 px-2;
     }
 }
