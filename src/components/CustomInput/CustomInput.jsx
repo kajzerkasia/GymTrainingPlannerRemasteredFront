@@ -1,6 +1,6 @@
 import React from "react";
 
-const CustomInput = ({ labelText, children, value, onChange, ...props }) => {
+const CustomInput = ({ labelText, value, onChange }) => {
   return (
     <div>
       <p>
@@ -11,7 +11,6 @@ const CustomInput = ({ labelText, children, value, onChange, ...props }) => {
           className="exercises-input"
           onChange={onChange}
           value={value}
-          {...props}
         />
       </p>
     </div>
