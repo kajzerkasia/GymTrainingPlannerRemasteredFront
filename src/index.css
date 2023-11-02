@@ -65,6 +65,18 @@ html {
     }
 
     .header-p {
-        @apply text-violet text-sm
+        @apply text-violet text-sm;
+    }
+
+    .plans-section {
+        @apply flex flex-col text-violet uppercase font-bold;
+    }
+
+    .plans-tabs {
+        @apply flex flex-wrap justify-center list-none py-8 m-0 gap-8;
+    }
+
+    .plans-tab-button {
+        @apply text-almost-white border-solid border-2 border-violet py-2 px-2;
     }
 }
