@@ -44,4 +44,12 @@ html {
     .exercises-second-ol {
         @apply flex flex-wrap justify-center gap-8 m-0 p-0 list-none;
     }
+
+    .exercises-input {
+        @apply w-full p-2 mb-4 border border-cyan bg-transparent rounded text-cyan text-base;
+    }
+
+    .exercises-label {
+        @apply block mb-1 font-title text-base font-bold uppercase text-almost-white;
+    }
 }
