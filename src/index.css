@@ -14,7 +14,7 @@ html {
 
 @layer components {
     .edit-button-input {
-        @apply text-base w-40 border-none p-2 animate-pulse bg-violet text-center uppercase;
+        @apply text-base w-40 border-none p-2 animate-pulse bg-darker-violet text-center uppercase;
     }
 
     .edit-button {
