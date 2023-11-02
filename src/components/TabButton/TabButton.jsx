@@ -1,10 +1,11 @@
 import React from "react";
 
 const TabButton = ({ children, isSelected, ...props }) => {
-  let active = "bg-darker-violet";
-
   return (
-    <div className={`isSelected ? ${active} : ''`} {...props}>
+    <div
+      className={isSelected ? "plans-tab-button active" : "plans-tab-button"}
+      {...props}
+    >
       {children}
     </div>
   );
