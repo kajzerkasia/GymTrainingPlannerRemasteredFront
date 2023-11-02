@@ -52,4 +52,8 @@ html {
     .exercises-label {
         @apply block mb-1 font-title text-base font-bold uppercase text-almost-white;
     }
+
+    .section {
+        @apply p-4 w-2/5 my-8 mx-0 rounded bg-violet;
+    }
 }
