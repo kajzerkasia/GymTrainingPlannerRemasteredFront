@@ -1,37 +1,34 @@
 import React from "react";
 import Section from "../Section.jsx";
 import CustomInput from "../CustomInput/CustomInput.jsx";
-// import './ExercisesInput.css';
 
 const ExercisesInput = ({ onChange, exercisesInput }) => {
-  const labelClasses =
-    "block mb-1 font-title text-base font-bold uppercase text-almost-white";
-  const inputClasses =
-    "w-full p-2 mb-4 border border-cyan bg-transparent rounded text-cyan text-base";
-
   return (
     <Section className="p-4 w-2/5 my-8 mx-0 rounded bg-violet">
-      <CustomInput labelText="Kolejność" className={labelClasses}>
+      <CustomInput labelText="Kolejność" className="exercises-label">
         <input
-          className={inputClasses}
+          className="exercises-input"
           type="text"
           required
           value={exercisesInput.order}
           onChange={(event) => onChange("order", event.target.value)}
         />
       </CustomInput>
-      <CustomInput labelText="Ćwiczenie" className={labelClasses}>
+      <CustomInput labelText="Ćwiczenie" className="exercises-label">
         <input
-          className={inputClasses}
+          className="exercises-input"
           type="text"
           required
           value={exercisesInput.exercise}
           onChange={(event) => onChange("exercise", event.target.value)}
         />
       </CustomInput>
-      <CustomInput labelText="Ilość serii i powtórzeń" className={labelClasses}>
+      <CustomInput
+        labelText="Ilość serii i powtórzeń"
+        className="exercises-label"
+      >
         <input
-          className={inputClasses}
+          className="exercises-input"
           type="text"
           required
           value={exercisesInput.seriesAndRepetitions}
@@ -40,18 +37,18 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
           }
         />
       </CustomInput>
-      <CustomInput labelText="Tempo" className={labelClasses}>
+      <CustomInput labelText="Tempo" className="exercises-label">
         <input
-          className={inputClasses}
+          className="exercises-input"
           type="text"
           required
           value={exercisesInput.tempo}
           onChange={(event) => onChange("tempo", event.target.value)}
         />
       </CustomInput>
-      <CustomInput labelText="Długość przerwy" className={labelClasses}>
+      <CustomInput labelText="Długość przerwy" className="exercises-label">
         <input
-          className={inputClasses}
+          className="exercises-input"
           type="text"
           required
           value={exercisesInput.rest}
