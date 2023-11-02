@@ -16,17 +16,14 @@ const Plans = () => {
 
   return (
     <Card>
-      <Section
-        className="flex flex-col text-violet uppercase font-bold"
-        title="Plany treningowe"
-      >
+      <Section className="plans-section" title="Plany treningowe">
         <Tabs
-          className="flex flex-wrap justify-center list-none py-8 m-0 gap-8"
+          className="plans-tabs"
           buttons={
             <>
               {PLANS.map((plan) => (
                 <TabButton
-                  className="text-almost-white border-solid border-2 border-violet py-2 px-2"
+                  className="plans-tab-button"
                   key={plan.title}
                   {...plan}
                   isSelected={selectedPlan === `${plan.title}`}
