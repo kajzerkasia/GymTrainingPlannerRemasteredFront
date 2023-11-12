@@ -46,7 +46,7 @@ html {
     }
 
     .exercises-input {
-        @apply w-full p-2 mb-4 border border-cyan bg-transparent rounded text-cyan text-base;
+        @apply w-full p-2 mb-4 border-b-2 border-violet focus:outline-none focus:border-darker-violet bg-lighter-violet rounded text-darker-violet text-base;
     }
 
     .exercises-label {
