@@ -1,5 +1,4 @@
 import React from "react";
-import { createArrayOfExercises } from "../../utils/exercisesArray.js";
 
 // const initialExercises = [
 //     ["1", "goblet squat", "3s8", "3111", "120-180s"],
@@ -9,12 +8,11 @@ import { createArrayOfExercises } from "../../utils/exercisesArray.js";
 //     ["5", "suitcase walk", "3s50m", null, "60s"],
 // ]
 
-const ExercisesData = ({ exercisesData }) => {
-  const exercises = createArrayOfExercises(exercisesData);
+const ExercisesData = ({ exercisesArray }) => {
 
   return (
     <ol className="exercises-ol">
-      {exercises.map((row, rowIndex) => (
+      {exercisesArray.map((row, rowIndex) => (
         <li key={rowIndex}>
           <ol className="exercises-second-ol">
             {Object.entries(row).map(([key, value], colIndex) => (

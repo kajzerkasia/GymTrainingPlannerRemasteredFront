@@ -34,6 +34,7 @@ function App() {
                 rest,
             }
         ]);
+        return exercisesArray;
     }
 
     const resetExercisesInput = () => {
@@ -53,9 +54,7 @@ function App() {
                 onReset={resetExercisesInput}
             />
             <ExercisesColumnsNames/>
-            {exercisesInput.order !== "" && (
-                <ExercisesData exercisesData={exercisesInput}/>
-            )}
+            <ExercisesData exercisesArray={exercisesArray}/>
         </div>
     );
 }
