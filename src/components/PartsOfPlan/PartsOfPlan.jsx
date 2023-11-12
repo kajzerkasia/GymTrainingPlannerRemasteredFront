@@ -6,7 +6,7 @@ import TabButton from "../TabButton/TabButton.jsx";
 import EditButton from "../EditButton/EditButton.jsx";
 import {PARTS_OF_PLANS} from "../../constants/data.js";
 
-const TabContent = () => {
+const PartsOfPlan = () => {
   const [selectedPartOfPlan, setSelectedPartOfPlan] = useState();
 
   const handleSelectPartOfPlan = (selectedButton) => {
@@ -22,9 +22,7 @@ const TabContent = () => {
             <Card>
               {PARTS_OF_PLANS.map((partOfPlan) => (
                 <TabButton
-                  className="tab-content-tab-button"
                   key={partOfPlan.title}
-                  {...partOfPlan}
                   isSelected={selectedPartOfPlan === `${partOfPlan.title}`}
                   onClick={() => handleSelectPartOfPlan(`${partOfPlan.title}`)}
                 >
@@ -39,4 +37,4 @@ const TabContent = () => {
   );
 };
 
-export default TabContent;
+export default PartsOfPlan;
