@@ -3,6 +3,7 @@ import TabButton from "../TabButton/TabButton.jsx";
 import Section from "../Section.jsx";
 import Tabs from "../Tabs/Tabs.jsx";
 import EditButton from "../EditButton/EditButton.jsx";
+import PartsOfPlanData from "../PartsOfPlanData/PartsOfPlanData.jsx";
 import PartsOfPlan from "../PartsOfPlan/PartsOfPlan.jsx";
 
 const PlansData = ({ plansArray }) => {
