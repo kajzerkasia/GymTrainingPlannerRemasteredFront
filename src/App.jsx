@@ -5,15 +5,10 @@ import ExercisesData from "./components/ExercisesData/ExercisesData.jsx";
 import {useState} from "react";
 import ExercisesInput from "./components/ExercisesInput/ExercisesInput.jsx";
 import ExercisesColumnsNames from "./components/ExercisesColumnsNames/ExercisesColumnsNames.jsx";
+import {INITIAL_EXERCISES_INPUT} from "./constants/data.js";
 
 function App() {
-    const [exercisesInput, setExercisesInput] = useState({
-        order: "",
-        exercise: "",
-        seriesAndRepetitions: "",
-        tempo: "",
-        rest: "",
-    });
+    const [exercisesInput, setExercisesInput] = useState(INITIAL_EXERCISES_INPUT);
     const [exercisesArray, setExercisesArray] = useState([]);
 
     function handleChange(inputIdentifier, newValue) {
@@ -41,6 +36,10 @@ function App() {
         ]);
     }
 
+    const resetExercisesInput = () => {
+        setExercisesInput(INITIAL_EXERCISES_INPUT);
+    };
+
     return (
         <div>
             <Header/>
@@ -51,6 +50,7 @@ function App() {
                 exercisesInput={exercisesInput}
                 onChange={handleChange}
                 onSaveClick={handleSaveClick}
+                onReset={resetExercisesInput}
             />
             <ExercisesColumnsNames/>
             {exercisesInput.order !== "" && (

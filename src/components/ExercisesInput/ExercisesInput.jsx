@@ -3,11 +3,15 @@ import Section from "../Section.jsx";
 import CustomInput from "../CustomInput/CustomInput.jsx";
 import Button from "../Button/Button.jsx";
 
-const ExercisesInput = ({ exercisesInput, onChange, onSaveClick }) => {
+const ExercisesInput = ({ exercisesInput, onChange, onSaveClick, onReset }) => {
 
     const handleSave = () => {
         onSaveClick(exercisesInput);
     };
+
+    const resetFields = () => {
+        onReset();
+    }
 
   return (
     <Section className="section">
@@ -38,7 +42,12 @@ const ExercisesInput = ({ exercisesInput, onChange, onSaveClick }) => {
         value={exercisesInput.rest}
         onChange={(event) => onChange("rest", event.target.value)}
       />
-        <Button onClick={() => handleSave()}>
+        <Button
+            onClick={() => {
+                handleSave();
+                resetFields();
+            }}
+            >
             <p>Zapisz</p>
         </Button>
     </Section>
