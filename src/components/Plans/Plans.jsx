@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { PLANS } from "../../data.js";
 import TabButton from "../TabButton/TabButton.jsx";
 import Section from "../Section.jsx";
 import Tabs from "../Tabs/Tabs.jsx";
 import EditButton from "../EditButton/EditButton.jsx";
 import TabContent from "../TabContent/TabContent.jsx";
+import {PLANS} from "../../constants/data.js";
 
 const Plans = () => {
   const [selectedPlan, setSelectedPlan] = useState();
