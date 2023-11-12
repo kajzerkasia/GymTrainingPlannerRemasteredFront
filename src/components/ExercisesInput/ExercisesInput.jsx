@@ -1,8 +1,14 @@
 import React from "react";
 import Section from "../Section.jsx";
 import CustomInput from "../CustomInput/CustomInput.jsx";
+import Button from "../Button/Button.jsx";
 
-const ExercisesInput = ({ onChange, exercisesInput }) => {
+const ExercisesInput = ({ exercisesInput, onChange, onSaveClick }) => {
+
+    const handleSave = () => {
+        onSaveClick(exercisesInput);
+    };
+
   return (
     <Section className="section">
       <CustomInput
@@ -32,6 +38,9 @@ const ExercisesInput = ({ onChange, exercisesInput }) => {
         value={exercisesInput.rest}
         onChange={(event) => onChange("rest", event.target.value)}
       />
+        <Button onClick={() => handleSave()}>
+            <p>Zapisz</p>
+        </Button>
     </Section>
   );
 };
