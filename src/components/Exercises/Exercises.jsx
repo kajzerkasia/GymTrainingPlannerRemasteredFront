@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import ExercisesInput from "../ExercisesInput/ExercisesInput.jsx";
 import ExercisesColumnsNames from "../ExercisesColumnsNames/ExercisesColumnsNames.jsx";
 import ExercisesData from "../ExercisesData/ExercisesData.jsx";
-import {INITIAL_EXERCISES_INPUT} from "../../constants/data.js";
+import {INITIAL_EXERCISES} from "../../constants/data.js";
 
 const Exercises = () => {
 
-    const [exercisesInput, setExercisesInput] = useState(INITIAL_EXERCISES_INPUT);
+    const [exercisesInput, setExercisesInput] = useState(INITIAL_EXERCISES);
     const [exercisesArray, setExercisesArray] = useState([]);
 
     function handleChange(inputIdentifier, newValue) {
@@ -36,7 +36,7 @@ const Exercises = () => {
     }
 
     const resetExercisesInput = () => {
-        setExercisesInput(INITIAL_EXERCISES_INPUT);
+        setExercisesInput(INITIAL_EXERCISES);
     };
 
     return (
