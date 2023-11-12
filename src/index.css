@@ -95,4 +95,8 @@ html {
     .tab-content-tab-button {
         @apply text-almost-white border-solid border-2 border-violet py-2 px-2;
     }
+
+    .button {
+        @apply bg-darker-violet py-2 px-4 text-almost-white rounded;
+    }
 }
