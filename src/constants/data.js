@@ -1,15 +1,5 @@
-export const INITIAL_EXERCISES = {
-    order: "",
-    exercise: "",
-    seriesAndRepetitions: "",
-    tempo: "",
-    rest: "",
-};
+export const EXERCISES_KEYS = ["order", "exercise", "seriesAndRepetitions", "tempo", "rest"];
 
-export const INITIAL_PLANS = {
-    title: "",
-}
+export const PLANS_KEYS = ["title"];
 
-export const INITIAL_PARTS_OF_PLANS = {
-    title: "",
-}
+export const PARTS_OF_PLAN_KEYS = ["title"];

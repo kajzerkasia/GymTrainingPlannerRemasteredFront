@@ -2,16 +2,16 @@ import React from 'react';
 import PlansInput from "../PlansInput/PlansInput.jsx";
 import PlansData from "../PlansData/PlansData.jsx";
 import {useInputLogic} from "../../hooks/useInputLogic.js";
+import {PLANS_KEYS} from "../../constants/data.js";
 
 const Plans = () => {
-  const keys = ["title"];
   const {
       input,
       itemsArray,
       handleChange,
       handleSaveClick,
       handleReset,
-  } = useInputLogic(keys);
+  } = useInputLogic(PLANS_KEYS);
 
     return (
         <div>
