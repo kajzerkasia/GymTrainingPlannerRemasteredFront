@@ -3,7 +3,7 @@ import TabButton from "../TabButton/TabButton.jsx";
 import Section from "../Section.jsx";
 import Tabs from "../Tabs/Tabs.jsx";
 import EditButton from "../EditButton/EditButton.jsx";
-import TabContent from "../TabContent/TabContent.jsx";
+import PartsOfPlan from "../PartsOfPlan/PartsOfPlan.jsx";
 import {PLANS} from "../../constants/data.js";
 
 const Plans = () => {
@@ -22,7 +22,6 @@ const Plans = () => {
             {PLANS.map((plan) => (
               <TabButton
                 key={plan.title}
-                {...plan}
                 isSelected={selectedPlan === `${plan.title}`}
                 onClick={() => handleSelectPlan(`${plan.title}`)}
               >
@@ -32,7 +31,7 @@ const Plans = () => {
           </>
         }
       >
-        {selectedPlan ? <TabContent /> : <p>Wybierz plan</p>}
+        {selectedPlan ? <PartsOfPlan /> : <p>Wybierz plan</p>}
       </Tabs>
     </Section>
   );

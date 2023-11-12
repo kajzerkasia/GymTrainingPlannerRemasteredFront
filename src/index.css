@@ -76,8 +76,8 @@ html {
         @apply flex flex-wrap justify-center list-none py-8 m-0 gap-8;
     }
 
-    .plans-tab-button {
-        @apply text-almost-white border-solid border-2 border-violet py-2 px-2 hover:bg-violet;
+    .tab-button {
+        @apply text-almost-white border-solid border-2 border-violet mt-8 py-2 px-2 hover:bg-violet;
     }
 
     .active {
@@ -98,5 +98,9 @@ html {
 
     .button {
         @apply bg-darker-violet py-2 px-4 text-almost-white rounded;
+    }
+
+    .exercises-input-p {
+        @apply text-violet mt-12;
     }
 }

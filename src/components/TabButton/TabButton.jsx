@@ -3,7 +3,7 @@ import React from "react";
 const TabButton = ({ children, isSelected, ...props }) => {
   return (
     <div
-      className={isSelected ? "plans-tab-button active" : "plans-tab-button"}
+      className={isSelected ? "tab-button active" : "tab-button"}
       {...props}
     >
       {children}
