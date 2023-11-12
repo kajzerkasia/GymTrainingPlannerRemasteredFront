@@ -1,40 +1,29 @@
-import React, { useState } from "react";
-import Section from "../Section.jsx";
-import Tabs from "../Tabs/Tabs.jsx";
-import Card from "../UI/Card.jsx";
-import TabButton from "../TabButton/TabButton.jsx";
-import EditButton from "../EditButton/EditButton.jsx";
-import {PARTS_OF_PLANS} from "../../constants/data.js";
+import React from 'react';
+import {useInputLogic} from "../../hooks/useInputLogic.js";
+import PartsOfPlanData from "../PartsOfPlanData/PartsOfPlanData.jsx";
+import PartsOfPlanInput from "../PartsOfPlanInput/PartsOfPlanInput.jsx";
 
 const PartsOfPlan = () => {
-  const [selectedPartOfPlan, setSelectedPartOfPlan] = useState();
+    const keys = ["title"];
+    const {
+        input,
+        itemsArray,
+        handleChange,
+        handleSaveClick,
+        handleReset,
+    } = useInputLogic(keys);
 
-  const handleSelectPartOfPlan = (selectedButton) => {
-    setSelectedPartOfPlan(selectedButton);
-  };
-
-  return (
-    <div id="tab-content">
-      <Section className="tab-content-section">
-        <Tabs
-          className="tab-content-tabs"
-          buttons={
-            <Card>
-              {PARTS_OF_PLANS.map((partOfPlan) => (
-                <TabButton
-                  key={partOfPlan.title}
-                  isSelected={selectedPartOfPlan === `${partOfPlan.title}`}
-                  onClick={() => handleSelectPartOfPlan(`${partOfPlan.title}`)}
-                >
-                  <EditButton initialName={partOfPlan.title} />
-                </TabButton>
-              ))}
-            </Card>
-          }
-        ></Tabs>
-      </Section>
-    </div>
-  );
+    return (
+        <div>
+            <PartsOfPlanInput
+                partsOfPlanInput={input}
+                onSaveClick={handleSaveClick}
+                onChange={handleChange}
+                onReset={handleReset}
+            />
+            <PartsOfPlanData partsOfPlanArray={itemsArray}/>
+        </div>
+    );
 };
 
 export default PartsOfPlan;

@@ -7,20 +7,9 @@ export const INITIAL_EXERCISES = {
 };
 
 export const INITIAL_PLANS = {
-    title: ""
+    title: "",
 }
 
-export const PARTS_OF_PLANS = [
-    {
-        image: "",
-        title: "Rozgrzewka",
-    },
-    {
-        image: "",
-        title: "Trening A",
-    },
-    {
-        image: "",
-        title: "Trening B",
-    },
-];
+export const INITIAL_PARTS_OF_PLANS = {
+    title: "",
+}
