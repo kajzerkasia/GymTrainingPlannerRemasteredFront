@@ -1,40 +1,33 @@
-import React, { useState } from "react";
-import TabButton from "../TabButton/TabButton.jsx";
-import Section from "../Section.jsx";
-import Tabs from "../Tabs/Tabs.jsx";
-import EditButton from "../EditButton/EditButton.jsx";
-import PartsOfPlan from "../PartsOfPlan/PartsOfPlan.jsx";
-import {PLANS} from "../../constants/data.js";
+import React, {useState} from 'react';
+import PlansInput from "../PlansInput/PlansInput.jsx";
+import {INITIAL_EXERCISES_INPUT, PLANS} from "../../constants/data.js";
 
 const Plans = () => {
-  const [selectedPlan, setSelectedPlan] = useState();
+    const [plansInput, setPlansInput] = useState(PLANS);
+    const [plansArray, setPlansArray] = useState([]);
 
-  const handleSelectPlan = (selectedButton) => {
-    setSelectedPlan(selectedButton);
-  };
+    const handleSaveClick = (newPlan) => {
+        const {image, title} = newPlan;
+        const updatedPlansArray = [...plansArray];
+        setPlansArray(updatedPlansArray);
+        setPlansArray((prevPlansArray) => [
+            ...prevPlansArray,
+            {
+                image,
+                title,
+            }
+        ]);
+        return plansArray;
+    }
 
-  return (
-    <Section className="plans-section" title="Plany treningowe">
-      <Tabs
-        className="plans-tabs"
-        buttons={
-          <>
-            {PLANS.map((plan) => (
-              <TabButton
-                key={plan.title}
-                isSelected={selectedPlan === `${plan.title}`}
-                onClick={() => handleSelectPlan(`${plan.title}`)}
-              >
-                <EditButton initialName={plan.title} />
-              </TabButton>
-            ))}
-          </>
-        }
-      >
-        {selectedPlan ? <PartsOfPlan /> : <p>Wybierz plan</p>}
-      </Tabs>
-    </Section>
-  );
+    return (
+        <div>
+            <PlansInput
+                plansInput={plansInput}
+                onSaveClick={handleSaveClick}
+            />
+        </div>
+    );
 };
 
 export default Plans;
