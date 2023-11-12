@@ -1,4 +1,4 @@
-export const INITIAL_EXERCISES_INPUT = {
+export const INITIAL_EXERCISES = {
     order: "",
     exercise: "",
     seriesAndRepetitions: "",
@@ -6,24 +6,9 @@ export const INITIAL_EXERCISES_INPUT = {
     rest: "",
 };
 
-export const PLANS = [
-    {
-        image: "",
-        title: "Plan Kasi",
-    },
-    {
-        image: "",
-        title: "Plan Kuby",
-    },
-    {
-        image: "",
-        title: "Plan Damiana",
-    },
-    {
-        image: "",
-        title: "Plan Uli",
-    },
-];
+export const INITIAL_PLANS = {
+    title: ""
+}
 
 export const PARTS_OF_PLANS = [
     {
