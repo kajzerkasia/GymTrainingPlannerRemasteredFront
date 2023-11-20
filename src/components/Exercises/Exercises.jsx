@@ -1,9 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import ExercisesInput from "../ExercisesInput/ExercisesInput.jsx";
-import ExercisesColumnsNames from "../ExercisesColumnsNames/ExercisesColumnsNames.jsx";
-import ExercisesData from "../ExercisesData/ExercisesData.jsx";
-import {useInputLogic} from "../../hooks/useInputLogic.js";
-import {EXERCISES_KEYS} from "../../constants/data.js";
+import { InputContext } from "../../store/input-context.jsx";
 
 const Exercises = () => {
     const {
@@ -12,7 +9,7 @@ const Exercises = () => {
         handleChange,
         handleSaveClick,
         handleReset,
-    } = useInputLogic(EXERCISES_KEYS);
+    } = useContext(InputContext);
 
     return (
         <div>
@@ -24,8 +21,8 @@ const Exercises = () => {
                 }}
                 onReset={handleReset}
             />
-            {itemsArray.length > 0 && <ExercisesColumnsNames />}
-            <ExercisesData exercisesArray={itemsArray} />
+            {/*{itemsArray.length > 0 && <ExercisesColumnsNames />}*/}
+            {/*<ExercisesData exercisesArray={itemsArray} />*/}
         </div>
     );
 };

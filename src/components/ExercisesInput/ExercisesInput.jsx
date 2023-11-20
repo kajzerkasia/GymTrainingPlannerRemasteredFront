@@ -15,7 +15,7 @@ const ExercisesInput = ({exercisesInput, onChange, onSaveClick, onReset}) => {
 
     return (
         <>
-            <p className="exercises-input-p">Dodaj ćwiczenie do wybranej części planu</p>
+            <h1 className="block mb-1 font-header text-base uppercase text-almost-white">Ćwiczenia</h1>
             <Section className="section">
                 <CustomInput
                     labelText="Kolejność"
