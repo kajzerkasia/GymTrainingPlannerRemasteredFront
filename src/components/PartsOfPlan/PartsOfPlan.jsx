@@ -1,8 +1,8 @@
 import React from 'react';
 import {useInputLogic} from "../../hooks/useInputLogic.js";
-import PartsOfPlanData from "../PartsOfPlanData/PartsOfPlanData.jsx";
 import PartsOfPlanInput from "../PartsOfPlanInput/PartsOfPlanInput.jsx";
 import {PARTS_OF_PLAN_KEYS} from "../../constants/data.js";
+import Exercises from "../Exercises/Exercises.jsx";
 
 const PartsOfPlan = () => {
     const {
@@ -17,11 +17,18 @@ const PartsOfPlan = () => {
         <div>
             <PartsOfPlanInput
                 partsOfPlanInput={input}
-                onSaveClick={handleSaveClick}
+                onSaveClick={() => {
+                    handleSaveClick();
+                }}
                 onChange={handleChange}
                 onReset={handleReset}
             />
-            <PartsOfPlanData partsOfPlanArray={itemsArray}/>
+            {itemsArray.map((partOfPlan, partIndex) => (
+                <div key={partIndex}>
+                    <h1>{partOfPlan.title}</h1>
+                    <Exercises/>
+                </div>
+            ))}
         </div>
     );
 };

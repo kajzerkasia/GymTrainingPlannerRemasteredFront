@@ -19,7 +19,9 @@ const Exercises = () => {
             <ExercisesInput
                 exercisesInput={input}
                 onChange={handleChange}
-                onSaveClick={handleSaveClick}
+                onSaveClick={() => {
+                    handleSaveClick();
+                }}
                 onReset={handleReset}
             />
             {itemsArray.length > 0 && <ExercisesColumnsNames />}
