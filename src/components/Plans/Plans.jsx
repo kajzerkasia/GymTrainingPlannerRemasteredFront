@@ -5,13 +5,13 @@ import {useInputLogic} from "../../hooks/useInputLogic.js";
 import {PLANS_KEYS} from "../../constants/data.js";
 
 const Plans = () => {
-  const {
-      input,
-      itemsArray,
-      handleChange,
-      handleSaveClick,
-      handleReset,
-  } = useInputLogic(PLANS_KEYS);
+    const {
+        input,
+        itemsArray,
+        handleChange,
+        handleSaveClick,
+        handleReset,
+    } = useInputLogic(PLANS_KEYS);
 
     return (
         <div>
