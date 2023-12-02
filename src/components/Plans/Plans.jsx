@@ -1,6 +1,8 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import PlansInput from "../PlansInput/PlansInput.jsx";
-import { InputContext } from "../../store/input-context.jsx";
+import PlansData from "../PlansData/PlansData.jsx";
+import {useInputLogic} from "../../hooks/useInputLogic.js";
+import {PLANS_KEYS} from "../../constants/keys.js";
 
 const Plans = () => {
     const {
@@ -9,7 +11,7 @@ const Plans = () => {
         handleChange,
         handleSaveClick,
         handleReset,
-    } = useContext(InputContext);
+    } = useInputLogic(PLANS_KEYS);
 
     return (
         <div>
@@ -19,7 +21,7 @@ const Plans = () => {
                 onChange={handleChange}
                 onReset={handleReset}
             />
-            {/*<PlansData plansArray={itemsArray}/>*/}
+            <PlansData plansArray={itemsArray}/>
         </div>
     );
 };

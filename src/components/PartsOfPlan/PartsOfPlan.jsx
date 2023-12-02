@@ -1,6 +1,8 @@
-import React, {useContext} from 'react';
-import { InputContext } from "../../store/input-context.jsx";
+import React from 'react';
 import PartsOfPlanInput from "../PartsOfPlanInput/PartsOfPlanInput.jsx";
+import {useInputLogic} from "../../hooks/useInputLogic.js";
+import {PARTS_OF_PLAN_KEYS} from "../../constants/keys.js";
+import PartsOfPlanData from "../PartsOfPlanData/PartsOfPlanData.jsx";
 
 const PartsOfPlan = () => {
     const {
@@ -9,24 +11,17 @@ const PartsOfPlan = () => {
         handleChange,
         handleSaveClick,
         handleReset,
-    } = useContext(InputContext);
+    } = useInputLogic(PARTS_OF_PLAN_KEYS);
 
     return (
         <div>
             <PartsOfPlanInput
                 partsOfPlanInput={input}
-                onSaveClick={() => {
-                    handleSaveClick();
-                }}
+                onSaveClick={handleSaveClick}
                 onChange={handleChange}
                 onReset={handleReset}
             />
-            {/*{itemsArray.map((partOfPlan, partIndex) => (*/}
-            {/*    <div key={partIndex}>*/}
-            {/*        <h1>{partOfPlan.title}</h1>*/}
-            {/*        <Exercises/>*/}
-            {/*    </div>*/}
-            {/*))}*/}
+            <PartsOfPlanData partsOfPlanArray={itemsArray}/>
         </div>
     );
 };
