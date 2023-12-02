@@ -1,9 +1,9 @@
 import React, {useState} from "react";
-import TabButton from "../TabButton/TabButton.jsx";
-import Section from "../Section.jsx";
-import Tabs from "../Tabs/Tabs.jsx";
-import EditButton from "../EditButton/EditButton.jsx";
-import PartsOfPlan from "../PartsOfPlan/PartsOfPlan.jsx";
+import TabButton from "./TabButton.jsx";
+import Section from "./Section.jsx";
+import Tabs from "./Tabs.jsx";
+import EditButton from "./EditButton.jsx";
+import PartsOfPlan from "./PartsOfPlan.jsx";
 
 const PlansData = ({plansArray}) => {
     const [selectedPlan, setSelectedPlan] = useState();

@@ -1,6 +1,6 @@
-import Section from "../Section.jsx";
-import CustomInput from "../CustomInput/CustomInput.jsx";
-import Button from "../Button/Button.jsx";
+import Section from "./Section.jsx";
+import CustomInput from "./CustomInput.jsx";
+import Button from "./Button.jsx";
 import React from "react";
 
 const PartsOfPlanInput = ({partsOfPlanInput, onSaveClick, onChange, onReset}) => {
