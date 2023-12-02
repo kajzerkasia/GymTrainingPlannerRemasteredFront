@@ -1,8 +1,8 @@
 import React from 'react';
-import PlansInput from "../PlansInput/PlansInput.jsx";
-import PlansData from "../PlansData/PlansData.jsx";
-import {useInputLogic} from "../../hooks/useInputLogic.js";
-import {PLANS_KEYS} from "../../constants/keys.js";
+import PlansInput from "./PlansInput.jsx";
+import PlansData from "./PlansData.jsx";
+import {useInputLogic} from "../hooks/useInputLogic.js";
+import {PLANS_KEYS} from "../constants/keys.js";
 
 const Plans = () => {
     const {

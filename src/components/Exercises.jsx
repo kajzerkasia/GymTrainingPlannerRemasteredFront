@@ -1,9 +1,9 @@
 import React from 'react';
-import ExercisesInput from "../ExercisesInput/ExercisesInput.jsx";
-import ExercisesColumnsNames from "../ExercisesColumnsNames/ExercisesColumnsNames.jsx";
-import ExercisesData from "../ExercisesData/ExercisesData.jsx";
-import {useInputLogic} from "../../hooks/useInputLogic.js";
-import {EXERCISES_KEYS} from "../../constants/keys.js";
+import ExercisesInput from "./ExercisesInput.jsx";
+import ExercisesColumnsNames from "./ExercisesColumnsNames.jsx";
+import ExercisesData from "./ExercisesData.jsx";
+import {useInputLogic} from "../hooks/useInputLogic.js";
+import {EXERCISES_KEYS} from "../constants/keys.js";
 
 const Exercises = () => {
     const {

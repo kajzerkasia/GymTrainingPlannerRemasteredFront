@@ -1,7 +1,7 @@
 import React from 'react';
-import Section from "../Section.jsx";
-import CustomInput from "../CustomInput/CustomInput.jsx";
-import Button from "../Button/Button.jsx";
+import Section from "./Section.jsx";
+import CustomInput from "./CustomInput.jsx";
+import Button from "./Button.jsx";
 
 const PlansInput = ({plansInput, onSaveClick, onChange, onReset}) => {
 

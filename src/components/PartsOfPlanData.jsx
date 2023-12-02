@@ -1,10 +1,10 @@
 import React, {useState} from "react";
-import Section from "../Section.jsx";
-import Tabs from "../Tabs/Tabs.jsx";
-import Card from "../UI/Card.jsx";
-import TabButton from "../TabButton/TabButton.jsx";
-import EditButton from "../EditButton/EditButton.jsx";
-import Exercises from "../Exercises/Exercises.jsx";
+import Section from "./Section.jsx";
+import Tabs from "./Tabs.jsx";
+import Card from "./UI/Card.jsx";
+import TabButton from "./TabButton.jsx";
+import EditButton from "./EditButton.jsx";
+import Exercises from "./Exercises.jsx";
 
 const PartsOfPlanData = ({partsOfPlanArray}) => {
     const [selectedPartOfPlan, setSelectedPartOfPlan] = useState();
