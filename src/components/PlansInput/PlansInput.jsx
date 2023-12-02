@@ -4,13 +4,15 @@ import CustomInput from "../CustomInput/CustomInput.jsx";
 import Button from "../Button/Button.jsx";
 
 const PlansInput = ({plansInput, onSaveClick, onChange, onReset}) => {
-    const handleSave = () => {
-        onSaveClick(plansInput);
-    };
 
     const resetFields = () => {
         onReset();
     }
+
+    const handleSave = () => {
+        onSaveClick(plansInput);
+        resetFields();
+    };
 
     return (
         <Section>
@@ -23,7 +25,6 @@ const PlansInput = ({plansInput, onSaveClick, onChange, onReset}) => {
                 className="button"
                 onClick={() => {
                     handleSave();
-                    resetFields();
                 }}
             >
                 <p>Dodaj plan</p>
