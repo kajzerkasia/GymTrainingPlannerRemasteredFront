@@ -6,8 +6,8 @@ import TabButton from "./TabButton.jsx";
 import EditButton from "./EditButton.jsx";
 import Exercises from "./Exercises.jsx";
 
-const PartsOfPlanData = ({partsOfPlanArray}) => {
-    const [selectedPartOfPlan, setSelectedPartOfPlan] = useState();
+const PartsOfPlanData = ({partsOfPlanArray, selectedPlan}) => {
+    const [selectedPartOfPlan, setSelectedPartOfPlan] = useState('');
 
     const handleSelectPartOfPlan = (selectedButton) => {
         setSelectedPartOfPlan(selectedButton);
@@ -20,20 +20,23 @@ const PartsOfPlanData = ({partsOfPlanArray}) => {
                     className="tab-content-tabs"
                     buttons={
                         <Card>
-                            {partsOfPlanArray.map((partOfPlan) => (
-                                <TabButton
-                                    key={partOfPlan.title}
-                                    isSelected={selectedPartOfPlan === `${partOfPlan.title}`}
-                                    onClick={() => handleSelectPartOfPlan(`${partOfPlan.title}`)}
-                                >
-                                    <EditButton initialName={partOfPlan.title}/>
-                                </TabButton>
-                            ))}
+                            {selectedPlan && partsOfPlanArray
+                                .filter((partOfPlan) => partOfPlan.planId === selectedPlan)
+                                .map((partOfPlan) => (
+                                    <TabButton
+                                        key={partOfPlan.id}
+                                        isSelected={selectedPartOfPlan === partOfPlan.id}
+                                        onClick={() => handleSelectPartOfPlan(partOfPlan.id)}
+                                    >
+                                        <EditButton initialName={partOfPlan.title} />
+                                    </TabButton>
+                                ))}
+                            {selectedPlan && partsOfPlanArray.length === 0 && <p>Brak dostępnych części planu</p>}
                         </Card>
                     }
                 >
                 </Tabs>
-                {selectedPartOfPlan && <Exercises/>}
+                {selectedPartOfPlan && <Exercises selectedPartOfPlan={selectedPartOfPlan}/>}
             </Section>
         </div>
     );

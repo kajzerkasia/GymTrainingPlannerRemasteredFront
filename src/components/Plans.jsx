@@ -17,7 +17,7 @@ const Plans = () => {
         <div>
             <PlansInput
                 plansInput={input}
-                onSaveClick={handleSaveClick}
+                onSaveClick={() => handleSaveClick()}
                 onChange={handleChange}
                 onReset={handleReset}
             />
