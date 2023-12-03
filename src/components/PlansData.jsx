@@ -6,7 +6,7 @@ import EditButton from "./EditButton.jsx";
 import PartsOfPlan from "./PartsOfPlan.jsx";
 
 const PlansData = ({plansArray}) => {
-    const [selectedPlan, setSelectedPlan] = useState();
+    const [selectedPlan, setSelectedPlan] = useState('');
 
     const handleSelectPlan = (selectedButton) => {
         setSelectedPlan(selectedButton);
@@ -18,11 +18,12 @@ const PlansData = ({plansArray}) => {
                 className="plans-tabs"
                 buttons={
                     <>
-                        {plansArray.map((plan) => (
+                        {plansArray
+                            .map((plan) => (
                             <TabButton
-                                key={plan.title}
-                                isSelected={selectedPlan === `${plan.title}`}
-                                onClick={() => handleSelectPlan(`${plan.title}`)}
+                                key={plan.id}
+                                isSelected={selectedPlan === plan.id}
+                                onClick={() => handleSelectPlan(plan.id)}
                             >
                                 <EditButton initialName={plan.title}/>
                             </TabButton>
@@ -31,7 +32,7 @@ const PlansData = ({plansArray}) => {
                 }
             >
             </Tabs>
-            {selectedPlan && <PartsOfPlan/>}
+            {selectedPlan && <PartsOfPlan selectedPlan={selectedPlan} />}
         </Section>
     );
 };

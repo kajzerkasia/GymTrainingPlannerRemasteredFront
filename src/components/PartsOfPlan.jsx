@@ -4,7 +4,7 @@ import {useInputLogic} from "../hooks/useInputLogic.js";
 import {PARTS_OF_PLAN_KEYS} from "../constants/keys.js";
 import PartsOfPlanData from "./PartsOfPlanData.jsx";
 
-const PartsOfPlan = () => {
+const PartsOfPlan = ({ selectedPlan }) => {
     const {
         input,
         itemsArray,
@@ -13,15 +13,17 @@ const PartsOfPlan = () => {
         handleReset,
     } = useInputLogic(PARTS_OF_PLAN_KEYS);
 
+    console.log(input);
+
     return (
         <div>
             <PartsOfPlanInput
                 partsOfPlanInput={input}
-                onSaveClick={handleSaveClick}
+                onSaveClick={() => handleSaveClick(selectedPlan)}
                 onChange={handleChange}
                 onReset={handleReset}
             />
-            <PartsOfPlanData partsOfPlanArray={itemsArray}/>
+            <PartsOfPlanData partsOfPlanArray={itemsArray} selectedPlan={selectedPlan} />
         </div>
     );
 };

@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {v4 as uuid} from 'uuid';
 
 export const createInitialState = (keys) => {
     const initialState = {};
@@ -30,8 +31,11 @@ export const useInputLogic = (keys) => {
         setInput((prevInput) => updateInput(prevInput, inputIdentifier, newValue));
     };
 
-    const handleSaveClick = () => {
-        setItemsArray((prevItemsArray) => saveItem(prevItemsArray, input));
+    const handleSaveClick = (planId, partOfPlanId) => {
+        console.log('Selected planId in handleSaveClick:', planId);
+        console.log('Selected partOfPlanId in handleSaveClick:', partOfPlanId);
+        const newItem = { ...input, id: uuid(), planId, partOfPlanId };
+        setItemsArray((prevItemsArray) => saveItem(prevItemsArray, newItem));
         setInput(resetInput(initialState));
     };
 

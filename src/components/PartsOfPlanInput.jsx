@@ -4,13 +4,14 @@ import Button from "./Button.jsx";
 import React from "react";
 
 const PartsOfPlanInput = ({partsOfPlanInput, onSaveClick, onChange, onReset}) => {
-    const handleSave = () => {
-        onSaveClick(partsOfPlanInput);
-    };
-
     const resetFields = () => {
         onReset();
     }
+
+    const handleSave = () => {
+        onSaveClick(partsOfPlanInput);
+        resetFields();
+    };
 
     return (
         <Section>
@@ -23,7 +24,6 @@ const PartsOfPlanInput = ({partsOfPlanInput, onSaveClick, onChange, onReset}) =>
                 className="button"
                 onClick={() => {
                     handleSave();
-                    resetFields();
                 }}
             >
                 <p>Dodaj część planu</p>
